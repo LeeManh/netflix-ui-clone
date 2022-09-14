@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-base font-normal text-text;
+  }
+  img {
+    @apply max-w-full;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply px-4 sm:px-8 md:px-16;
+  }
+  .icon {
+    @apply h-4 w-4 shrink-0 cursor-pointer md:h-6 md:w-6;
+  }
+  .icon-round {
+    @apply h-9 w-9 cursor-pointer rounded-full border-2 p-1 opacity-70 duration-200 hover:opacity-100;
+  }
+  .link {
+    @apply cursor-pointer font-semibold opacity-60 duration-200 hover:opacity-100 md:text-sm xl:text-base;
+  }
+  .link.active {
+    @apply opacity-100;
+  }
+  .link-menu {
+    @apply link w-full py-4 text-center hover:bg-white/10;
+  }
+  .animate-rotate {
+    @apply duration-300 group-hover:rotate-180;
+  }
+  .menu {
+    @apply invisible opacity-0 duration-200 group-hover:visible group-hover:opacity-100;
+  }
+  .btn {
+    @apply flex items-center space-x-1 rounded-md border-none px-5 py-[6px] text-xs font-semibold outline-none sm:text-sm;
+  }
+  .btn--1 {
+    @apply btn rounded-md  bg-white text-body duration-300 hover:bg-gray-100/60;
+  }
+  .btn--2 {
+    @apply btn rounded-md bg-gray-500/50 text-white duration-300 hover:bg-gray-500/30;
+  }
+  .btn-slide {
+    @apply invisible absolute top-0 z-10 ml-auto flex h-full w-[1rem] items-center justify-center bg-black/20 opacity-0 duration-200 group-hover:visible group-hover:opacity-100 hover:bg-black/40 hover:opacity-100 sm:w-[2rem] md:w-[4rem];
+  }
+  .arrow-slide {
+    @apply h-4 w-4 duration-200 hover:scale-110 md:h-8 md:w-8;
+  }
+  .slide-title {
+    @apply cursor-pointer text-sm font-semibold tracking-wide md:text-lg;
+  }
+  .logo-big {
+    @apply h-auto w-[75px] object-contain md:w-[167px];
+  }
+  .btn-form {
+    @apply w-full rounded-sm bg-red py-3 font-semibold text-white;
+  }
+  .title-form {
+    @apply text-3xl font-semibold;
+  }
+  .text-field {
+    @apply cursor-pointer flex min-h-[50px] w-full flex-col justify-center space-y-1 overflow-hidden rounded border-b-orange-400 bg-[#333333] px-4 py-1 text-gray-200;
+    
+    label {
+      @apply text-xs font-semibold;
+    }
+
+    input {
+      @apply border-none bg-transparent text-sm outline-none font-semibold;
+    }
+    
+  }
+  .hover-underline {
+    @apply hover:underline hover:underline-offset-2 duration-200 cursor-pointer;
+  }
+}
